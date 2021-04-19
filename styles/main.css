@@ -38,7 +38,7 @@ html {
   font-family: "Trispace", Arial, Helvetica, sans-serif;
   background-color: black;
   background-image: linear-gradient(
-    10deg,
+    5deg,
     var(--old-lace),
     var(--baby-blue-eyes) 20%,
     var(--cornflower-blue)
