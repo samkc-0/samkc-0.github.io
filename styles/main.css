@@ -43,7 +43,7 @@ html {
     5deg,
     var(--old-lace),
     var(--baby-blue-eyes) 20%,
-    var(--cornflower-blue)
+    var(--cornflower-blue) /* var(--space-cadet) */
   );
   color: white;
   min-height: 100%;
@@ -72,7 +72,7 @@ p {
 }
 
 a {
-  padding: 5px;
+  padding: 0px;
   color: inherit;
 }
 
