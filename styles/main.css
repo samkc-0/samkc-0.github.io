@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Trispace:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Turret+Road&display=swap");
+
+:root {
+  /* sunlight */
+  --old-lace: #f7f3e3;
+
+  /* sky */
+  --baby-blue-eyes: #98b9f2;
+  --cornflower-blue: #6f9ceb;
+
+  /* the above color, adjusted so the contrast ias more accessible */
+  /* (actually the text is too low for this to be the background, baby-blue-eyes
+  /* is the one that needs to be darked */
+  --cornflower-blue: #3074d5;
+
+  /* moon */
+  --lavender-web: #dbe6fb;
+
+  /* nav bg candidates */
+  --black-raisin: #231b1b;
+  --space-cadet: #1a1b41;
+  --dark-purple: #22031f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Turret Road", monospace;
+}
+
+html {
+  font-family: "Trispace", Arial, Helvetica, sans-serif;
+  background-color: black;
+  background-image: linear-gradient(
+    10deg,
+    var(--old-lace),
+    var(--baby-blue-eyes),
+    var(--cornflower-blue)
+  );
+  color: white;
+  min-height: 100%;
+}
+
+body {
+  margin: 10% 20% 0 20%;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+p {
+  text-shadow: 0 0 1px transparent;
+}
+
+.moon {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: -20px;
+  right: 50px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0);
+  box-shadow: -2px 3px 0 0 var(--lavender-web);
+  opacity: 0.5;
+}
+
+a {
+  padding: 5px;
+}
+
+.site-nav {
+  position: fixed;
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    var(--dark-purple) 0%,
+    rgba(0, 0, 0, 0) 70%
+  );
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  padding: 0;
+}
+
+.site-nav li {
+  list-style-type: none;
+  display: inline-block;
+  height: 100%;
+  margin: 0;
+}
+
+.site-nav a:visited {
+  color: fuchsia;
+}
