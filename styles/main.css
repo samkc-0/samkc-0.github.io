@@ -39,7 +39,7 @@ html {
   background-image: linear-gradient(
     10deg,
     var(--old-lace),
-    var(--baby-blue-eyes),
+    var(--baby-blue-eyes) 20%,
     var(--cornflower-blue)
   );
   color: white;
@@ -81,7 +81,7 @@ a {
     var(--space-cadet) 0%,
     rgba(0, 0, 0, 0) 70%
   );
-  opacity: 0.5;
+  opacity: 0.25;
   top: 0;
   left: 0;
 }
@@ -93,6 +93,6 @@ a {
   margin: 0;
 }
 
-.site-nav a:visited {
+.site-nav li .site-nav a:visited {
   color: fuchsia;
 }
