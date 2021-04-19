@@ -109,15 +109,15 @@ a {
   border-right: 5px solid #cf4d6f;
   position: fixed;
   bottom: 240px;
-  left: -100vw;
+  left: -1000px;
   animation: fly-across linear infinite 45s;
 }
 
 @keyframes fly-across {
   from {
-    left: -50vw;
+    transform: translateX(0);
   }
   to {
-    left: 300vw;
+    transform: translateX(200vw);
   }
 }
