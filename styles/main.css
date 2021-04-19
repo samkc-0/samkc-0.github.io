@@ -115,6 +115,7 @@ a {
   bottom: 240px;
   left: -1000px;
   animation: fly-across linear infinite 45s;
+  z-index: -2;
 }
 
 @keyframes fly-across {
@@ -125,3 +126,11 @@ a {
     transform: translateX(200vw);
   }
 }
+
+/* legibility fix */
+/* article {
+  background-color: var(--space-cadet-light);
+  transition: 1s background-color;
+  padding: 20px;
+  border-radius: 10px;
+} */
