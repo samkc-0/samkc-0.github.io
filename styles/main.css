@@ -69,6 +69,7 @@ p {
 
 a {
   padding: 5px;
+  color: inherit;
 }
 
 .site-nav {
