@@ -17,11 +17,12 @@
   /* moon */
   --lavender-web: #dbe6fb;
 
-  /* nav bg candidates */
-  --black-raisin: #231b1b;
+  /* navbar background */
   --space-cadet: #1a1b41;
   --space-cadet-light: rgba(26, 27, 65, 0.25);
-  --dark-purple: #22031f;
+
+  /* headings */
+  --light-coral: #f08080;
 }
 
 * {
@@ -31,6 +32,7 @@
 h1,
 h2,
 h3 {
+  color: var(--light-coral);
   font-family: "Turret Road", monospace;
 }
 
@@ -95,4 +97,31 @@ a {
 
 .site-nav li .site-nav a:visited {
   color: fuchsia;
+}
+
+/* ship flying across the screen
+   gives a feeling of scale */
+.contrail {
+  opacity: 0.25;
+  width: 1px;
+  height: 2px;
+  background-image: linear-gradient(
+    to left,
+    white,
+    rgba(255, 255, 255, 0) 500px
+  );
+  border-right: 5px solid #cf4d6f;
+  position: fixed;
+  bottom: 240px;
+  left: 0px;
+  animation: stretch forwards 45s;
+}
+
+@keyframes stretch {
+  from {
+    width: 1px;
+  }
+  to {
+    width: 100vw;
+  }
 }

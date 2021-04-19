@@ -19,5 +19,32 @@
       </nav>
     </main>
     <div class="moon"></div>
+    <div class="contrail"></div>
+    <style>
+      .contrail {
+        opacity: 0.25;
+        width: 1px;
+        height: 2px;
+        background-image: linear-gradient(
+          to left,
+          white,
+          rgba(255, 255, 255, 0) 500px
+        );
+        border-right: 5px solid #cf4d6f;
+        position: fixed;
+        bottom: 240px;
+        left: 0px;
+        animation: stretch forwards 45s;
+      }
+
+      @keyframes stretch {
+        from {
+          width: 1px;
+        }
+        to {
+          width: 100vw;
+        }
+      }
+    </style>
   </body>
 </html>
