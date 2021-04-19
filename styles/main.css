@@ -102,26 +102,22 @@ a {
 /* ship flying across the screen
    gives a feeling of scale */
 .contrail {
-  opacity: 0.25;
-  width: 1px;
+  opacity: 0.4;
+  width: 1000px;
   height: 2px;
-  background-image: linear-gradient(
-    to left,
-    white,
-    rgba(255, 255, 255, 0) 500px
-  );
+  background-image: linear-gradient(to left, white, rgba(255, 255, 255, 0) 50%);
   border-right: 5px solid #cf4d6f;
   position: fixed;
   bottom: 240px;
-  left: 0px;
-  animation: stretch forwards 45s;
+  left: -100vw;
+  animation: fly-across linear infinite 45s;
 }
 
-@keyframes stretch {
+@keyframes fly-across {
   from {
-    width: 1px;
+    left: -50vw;
   }
   to {
-    width: 100vw;
+    left: 300vw;
   }
 }
