@@ -20,6 +20,7 @@
   /* nav bg candidates */
   --black-raisin: #231b1b;
   --space-cadet: #1a1b41;
+  --space-cadet-light: rgba(26, 27, 65, 0.25);
   --dark-purple: #22031f;
 }
 
@@ -78,10 +79,9 @@ a {
   width: 100%;
   background: linear-gradient(
     to right,
-    var(--space-cadet) 0%,
+    var(--space-cadet-light) 0%,
     rgba(0, 0, 0, 0) 70%
   );
-  opacity: 0.25;
   top: 0;
   left: 0;
 }
