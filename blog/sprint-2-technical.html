@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Inline versus inline-block</title>
+    <meta charset="UTF-8" />
+    <link href="/styles/main.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <nav class="site-nav">
+      <ul>
+        <li>
+          <a href="../index.html">< Contents</a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <article>
+        <h1>Inline versus inline-block</h1>
+        <h3><time datetime="2017-04-20">20 April 2021</time></h3>
+        <p>
+          Here's the difference between inline and inline-block.<br />
+          As you can see this
+          <span class="inline-block outer example"><span class="inline-block inner example">
+              inline-block
+            </span></span>
+          and its padding are <br/>
+          pushing the rest of the text around. <br />
+          On the other hand, this
+          <span class="inline outer example"><span class="inline inner example">inline</span></span>
+          element with exactly the same CSS rules doesn't do that.<br>
+          The only rule difference between these two is <code>display:inline</code> versus <code>display: inline-block</code>.<br />
+        </p>
+
+        <p>
+          Both these elements have the rules
+        <pre>padding: 20px</pre>
+        <pre>height: 100px;</pre> 
+        <pre>width: 200px;</pre>
+        but inline elements totally ignore <code>width</code> & <code> height,</code>
+        and they ignore the top and bottom <code>margin</code> & <code>padding</code> values.
+        </p>
+        <style>
+          .example.outer {
+            border-radius: 5px;
+            text-align: center;
+            padding: 20px;
+            z-index: -30;
+            border: dotted var(--space-cadet-light) 1px;
+            height: 100px;
+            width: 200px;
+          }
+          .inline {
+            display: inline;
+          }
+          .inline-block {
+            display: inline-block;
+          }
+        </style>
+      </article>
+    </main>
+    <div class="moon"></div>
+    <div class="contrail"></div>
+    <!-- this is a comment. -->
+  </body>
+</html>
