@@ -2,7 +2,9 @@
 <html>
   <head>
     <title>Inline versus inline-block</title>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="/styles/main.css" rel="stylesheet" type="text/css" />
   </head>
 
@@ -24,8 +26,8 @@
           <span class="inline-block outer example"><span class="inline-block inner example">
               inline-block
             </span></span>
-          and its padding are <br/>
-          pushing the rest of the text around. <br />
+          and its padding <br/>
+          are pushing the rest of the text around. <br />
           On the other hand, this
           <span class="inline outer example"><span class="inline inner example">inline</span></span>
           element with exactly the same CSS rules doesn't do that.<br>
@@ -37,8 +39,9 @@
         <pre>padding: 20px</pre>
         <pre>height: 100px;</pre> 
         <pre>width: 200px;</pre>
-        but inline elements totally ignore <code>width</code> & <code> height,</code>
-        and they ignore the top and bottom <code>margin</code> & <code>padding</code> values.
+        but <code>inline</code> elements totally ignore <code>width</code> & <code> height,</code>
+        and they ignore the top and bottom <code>margin</code> & <code>padding</code> values.<br />
+        Note in the above example that the <code>inline</code> element still respects the padding rule, and has a 20px gap to both its left and right.
         </p>
         <style>
           .example.outer {
