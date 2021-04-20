@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Turret+Road&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap");
-/* @import url("https://fonts.googleapis.com/css2?family=Expletus+Sans&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Expletus+Sans&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap"); */
 
 :root {
   /* sunlight */
@@ -35,6 +36,7 @@ h2,
 h3 {
   color: var(--light-coral);
   font-family: "Turret Road", monospace;
+  /* font-variant: small-caps; */
 }
 
 html {
@@ -90,17 +92,31 @@ a {
   );
   top: 0;
   left: 0;
+  font-family: "Turret Road";
+  font-variant: small-caps;
+  text-transform: lowercase;
 }
 
 .site-nav li {
-  list-style-type: none;
-  display: inline-block;
-  height: 100%;
   margin: 0;
+  display: inline-block;
 }
 
-.site-nav li .site-nav a:visited {
-  color: fuchsia;
+.site-nav li:nth-of-type(n + 2)::before {
+  content: "";
+  margin-left: 1em;
+}
+
+.site-nav a {
+  text-decoration: none;
+}
+
+.site-nav a:hover {
+  border-bottom: solid white 1px;
+}
+
+.site-nav a:visited {
+  color: inherit;
 }
 
 /* ship flying across the screen
