@@ -21,16 +21,16 @@
         height: 100vh;
         line-height: 2em;
       }
-      #next {
+      #next, a {
      cursor:pointer;
-     color:blue;
+     color:white;
      text-decoration:underline;
 }
     </style>
     <p>
       <div>So far it's taken you <span id="iterations">1</span> iteration<span id="plural"></span>
       to find out what a loop is.</div><div>If you <em>still</em> don't know, click
-      <span id="next" href="">here</span>.</div><div>Otherwise you can <a href="javascript-dom.html">go back</a>.</div>
+      <span id="next" href="" title="i++;">here</span>.</div><div>Otherwise you can <a href="javascript-dom.html" title="break;">go back</a>.</div>
     </p>
     <script>
       let iterations = document.getElementById("iterations");
