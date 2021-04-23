@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Turret+Road&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Expletus+Sans&display=swap");
 /* @import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap"); */
 
@@ -25,6 +25,21 @@
 
   /* headings */
   --light-coral: #f08080;
+
+  --light-gradient: linear-gradient(
+    5deg,
+    var(--old-lace),
+    var(--baby-blue-eyes) 20%,
+    var(--cornflower-blue) /* var(--space-cadet) */
+  );
+
+  --dark-gradient: linear-gradient(
+    5deg,
+    var(--old-lace),
+    var(--baby-blue-eyes) 20%,
+    var(--cornflower-blue),
+    var(--space-cadet)
+  );
 }
 
 * {
@@ -41,13 +56,9 @@ h3 {
 
 html {
   font-family: "Kanit", Arial, Helvetica, sans-serif;
+  font-weight: 100;
   background-color: rgba(0, 0, 0, 0);
-  background-image: linear-gradient(
-    5deg,
-    var(--old-lace),
-    var(--baby-blue-eyes) 20%,
-    var(--cornflower-blue) /* var(--space-cadet) */
-  );
+  background-image: var(--light-gradient);
   color: white;
   min-height: 100%;
   background-repeat: no-repeat;
@@ -119,6 +130,11 @@ a {
   color: inherit;
 }
 
+/* make sure whole article can be scrolled over the darkest part of the sky */
+article {
+  margin-bottom: 20vh;
+}
+
 /* ship flying across the screen
    gives a feeling of scale */
 .contrail {
@@ -149,4 +165,12 @@ a {
   transition: 1s background-color;
   padding: 20px;
   border-radius: 10px;
+} */
+
+/* @media only screen and (min-width: 768px) {
+  article.wide {
+  }
+  article.wide #paragraphs {
+    columns: 2;
+  }
 } */
