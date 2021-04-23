@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>You are in one.</title>
+  </head>
+  <body>
+    <style>
+      body {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        color: white;
+        font-size: 20px;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        line-height: 2em;
+      }
+      #next {
+     cursor:pointer;
+     color:blue;
+     text-decoration:underline;
+}
+    </style>
+    <p>
+      <div>So far it's taken you <span id="iterations">1</span> iteration<span id="plural"></span>
+      to find out what a loop is.</div><div>If you <em>still</em> don't know, click
+      <span id="next" href="">here</span>.</div><div>Otherwise you can <a href="javascript-dom.html">go back</a>.</div>
+    </p>
+    <script>
+      let iterations = document.getElementById("iterations");
+      document.getElementById("next").addEventListener("click", function increment() {
+        iterations.innerText++;
+        document.getElementById("plural").innerText = "s";
+      });
+    </script>
+  </body>
+</html>
