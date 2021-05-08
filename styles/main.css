@@ -107,7 +107,7 @@ a {
   );
   top: 0;
   left: 0;
-  font-family: "Turret Road";
+  font-family: "Turret Road", monospace;
   font-variant: small-caps;
   text-transform: lowercase;
 }
