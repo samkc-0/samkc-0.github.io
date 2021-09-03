@@ -1,6 +1,6 @@
 import * as THREE from "three";
 import { ImprovedNoise } from "three/examples/jsm/math/ImprovedNoise";
-console.log(ImprovedNoise);
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 const Colors = Object.freeze({
   GROUND: 0xff69b4,
@@ -18,6 +18,9 @@ const aspectRatio = window.innerWidth / window.innerHeight;
 const camera = new THREE.PerspectiveCamera(60, aspectRatio, 1, 1e4);
 camera.position.set(0, CAMERA_HEIGHT);
 scene.add(camera);
+camera.position.x = CAMERA_DISTANCE * Math.sin(10);
+camera.position.z = CAMERA_DISTANCE * Math.cos(10);
+camera.lookAt(0, 200, 0);
 
 const renderer = new THREE.WebGLRenderer({ alpha: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -50,13 +53,17 @@ const terrain = new THREE.Mesh(geometry, material);
 terrain.position.y = -400;
 scene.add(terrain);
 
+// const center = new THREE.Object3D();
+// const sphere = new THREE.SphereGeometry(50, 10, 10);
+// const blackMaterial = new THREE.MeshBasicMaterial({ color: "black" });
+// const marker = new THREE.Mesh(sphere, blackMaterial);
+// center.add(marker);
+// scene.add(center);
+
 const clock = new THREE.Clock();
 (function animate() {
   requestAnimationFrame(animate);
   const t = clock.getElapsedTime();
-  camera.position.x = CAMERA_DISTANCE * Math.sin(10);
-  camera.position.z = CAMERA_DISTANCE * Math.cos(10);
-  camera.lookAt(0, 0, 0);
   renderer.render(scene, camera);
 })();
 
@@ -64,7 +71,7 @@ function onWindowResize() {
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
   renderer.setSize(window.innerWidth, window.innerHeight);
-  controls.handleResize();
+  // controls.handleResize();
 }
 
 function generateHeight(width, height) {
