@@ -22,6 +22,7 @@ scene.add(camera);
 const renderer = new THREE.WebGLRenderer({ alpha: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
+window.addEventListener("resize", onWindowResize);
 
 const WORLD_WIDTH = 256;
 const WORLD_HEIGHT = 256;
@@ -59,7 +60,12 @@ const clock = new THREE.Clock();
   renderer.render(scene, camera);
 })();
 
-function onWindowResize() {}
+function onWindowResize() {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  controls.handleResize();
+}
 
 function generateHeight(width, height) {
   let seed = Math.PI / 4;
