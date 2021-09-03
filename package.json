@@ -1,0 +1,30 @@
+{
+  "name": "samkc-0.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "dev": "webpack build --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samkc-0/samkc-0.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samkc-0/samkc-0.github.io/issues"
+  },
+  "homepage": "https://github.com/samkc-0/samkc-0.github.io#readme",
+  "dependencies": {
+    "three": "^0.131.3"
+  },
+  "devDependencies": {
+    "@types/three": "^0.131.0",
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0"
+  }
+}
