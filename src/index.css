@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "JetBrains Mono";
-  src: url("fonts/JetBrainsMono[wght].ttf") format("woff2-variations");
+  src: url("/fonts/JetBrainsMono-wght.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }

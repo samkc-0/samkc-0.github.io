@@ -4,8 +4,79 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 10vw;
+      }
+      ruby {
+        color: royalblue;
+      }
+      h1,
+      h2,
+      h3,
+      h4 {
+        text-align: center;
+      }
+      .warning {
+        position: fixed;
+        font-style: italic;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 2rem;
+        text-align: center;
+        padding: 0.5rem;
+        padding-bottom: 0;
+        color: gold;
+        background-color: crimson;
+      }
+    </style>
   </head>
   <body>
-    Hello there.
+    <div class="warning">
+      Text content translated and summarized by ChatGPT-4o
+    </div>
+    <h1>Árboles de búsqueda</h1>
+    <div>
+      La neta, los árboles de búsqueda son una chulada pa’ manejar estructuras
+      de datos dinámicas porque te dejan hacer de todo: <b>SEARCH</b>,
+      <b>MINIMUM</b>, <b>MAXIMUM</b>, <b>PREDECESSOR</b>, <b>SUCCESSOR</b>,
+      <b>INSERT</b>, y <b>DELETE</b>. Básicamente, son como un diccionario bien
+      <ruby>rifado<rt>???</rt></ruby> y también te sirven pa’ manejar colas de
+      prioridad.
+    </div>
+    <div><br /></div>
+    <div>
+      El pedo es que el rendimiento de estos vatos depende de qué tan alto sea
+      el árbol. Si tienes un árbol <ruby>bien balanceado<rt>???</rt></ruby
+      >, las operaciones te salen en <b>O(lg n)</b> en el peor de los casos.
+      Pero si te sale un árbol todo <ruby>ñango<rt>???</rt></ruby
+      >, con los nodos en línea como si fuera fila del Oxxo,
+      <ruby>pos<rt>???</rt></ruby> ya te amolaste porque el tiempo se va hasta
+      <b>O(n)</b>.
+    </div>
+    <div><br /></div>
+    <div>
+      Los <b>árboles rojo-negro</b>&nbsp;son como la versión mamalona de los
+      árboles de búsqueda. Estos
+      <ruby>meros machos<rt>???</rt></ruby> garantizan que la altura siempre
+      quede en <b>O(lg n)</b>. Y si
+      <ruby>armas un árbol con <b>n claves random</b><rt>???</rt></ruby
+      >, su altura esperada también es <b>O(lg n)</b> aunque no hagas nada
+      especial pa’ balancearlo.
+    </div>
+    <div><br /></div>
+    <div>
+      <p>
+        Después de ver las propiedades básicas de estos árboles, vamos a
+        aprender cómo recorrerlos para imprimir sus valores en orden,
+        <ruby>buscar un dato en chinga<rt>???</rt></ruby
+        >, encontrar el mínimo y el máximo, hallar el <b>predecesor</b> o
+        <b>sucesor</b> de un nodo, y claro, meter y sacar elementos con
+        <b>INSERT</b> y <b>DELETE</b>. Si quieres clavarte en la teoría
+        matemática de los árboles, chécate el <b>Apéndice B </b>de CLRS.
+      </p>
+    </div>
   </body>
 </html>
