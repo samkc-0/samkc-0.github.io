@@ -77,6 +77,108 @@
         <b>INSERT</b> y <b>DELETE</b>. Si quieres clavarte en la teoría
         matemática de los árboles, chécate el <b>Apéndice B </b>de CLRS.
       </p>
+      <hr />
+      <div>
+        Un <b>árbol de búsqueda binaria</b> es justo lo que su nombre dice: un
+        árbol binario bien organizado, como el que se ve en la
+        <b>Figura 12.1</b>. Este desmadre se puede representar con una
+        estructura <ruby>enlazada<rt>???</rt></ruby
+        >, como se explica en la <b>Sección 10.3</b>.
+      </div>
+      <div><br /></div>
+      <div>
+        Cada nodo trae su <b>key</b> y datos extra (pa’ lo que necesites
+        guardar), y además tiene tres apuntadores bien perrones: <b>left</b>,
+        <b>right</b> y <b>p</b>, que señalan a su hijo izquierdo, su hijo
+        derecho y su jefazo (o sea, su nodo padre). Si un nodo no tiene hijo o
+        no tiene jefe, esos apuntadores valen <b>NIL</b>, o sea, la nada misma.
+      </div>
+      <div><br /></div>
+      <div>
+        El árbol en sí tiene un atributo <b>root</b> que apunta al nodo raíz, o
+        <b>NIL</b> si el árbol está vacío. Y ojo: la <b>raíz</b> (<b>T.root</b>)
+        es el único nodo del árbol que no tiene papá (su <b>p</b> es NIL, porque
+        él es el mero jefe).
+      </div>
+      <div><br /></div>
+      <div><b>Propiedad chingona del árbol de búsqueda binaria</b><b></b></div>
+      <div><br /></div>
+      <div>
+        Los valores en un <b>árbol de búsqueda binaria</b> siempre se acomodan
+        siguiendo esta regla de oro:
+      </div>
+      <div><br /></div>
+      <div>
+        Si <b>x</b> es un nodo en el árbol, cualquier nodo <b>y</b> en su
+        subárbol izquierdo cumple que <b>y.key ≤ x.key</b>, y cualquier nodo
+        <b>y</b> en su subárbol derecho cumple que <b>y.key ≥ x.key</b>.
+      </div>
+      <div><br /></div>
+      <div>
+        Por ejemplo, en la <b>Figura 12.1(a)</b>, el nodo raíz tiene la key
+        <b>6</b>. En su subárbol izquierdo hay nodos con keys <b>2, 5 y 5</b>,
+        que son menores o iguales a <b>6</b>, y en su subárbol derecho hay nodos
+        con keys <b>7 y 8</b>, que son mayores o iguales a <b>6</b>.
+      </div>
+      <div><br /></div>
+      <div>
+        Esta misma regla se aplica pa’ todos los nodos del árbol. Si te fijas en
+        el nodo con key <b>5</b> (que es hijo izquierdo de la raíz), ese vato se
+        vuelve la raíz de su propio subárbol, y dentro de él, su subárbol
+        izquierdo tiene un nodo con key <b>2</b> (que es menor o igual a
+        <b>5</b>), y su subárbol derecho tiene otro nodo con key <b>5</b> (que
+        es mayor o igual a <b>5</b>).
+      </div>
+      <div><br /></div>
+      <div>
+        Básicamente, el árbol de búsqueda binaria es como un taquero bien
+        organizado: siempre sabe dónde va cada taco, pa’ que cuando le pidas
+        uno, te lo dé en chinga sin andar buscando a lo güey.
+      </div>
     </div>
+    <p>
+      Gracias a la <b>propiedad del árbol de búsqueda binaria</b>, puedes
+      imprimir todas las keys en orden bien bonito con un algoritmo recursivo
+      bien papita llamado <b>recorrido inorden</b> (<b>INORDER-TREE-WALK</b>).
+    </p>
+
+    <p>Este algoritmo se llama así porque sigue una lógica bien cuadrada:</p>
+
+    <ol>
+      <li>Primero imprime los valores del <b>subárbol izquierdo</b>.</li>
+      <li>Luego imprime la <b>key del nodo raíz</b>.</li>
+      <li>Finalmente, imprime los valores del <b>subárbol derecho</b>.</li>
+    </ol>
+
+    <p>
+      Hay otros tipos de recorridos, pero este es el más chido pa’ sacar las
+      keys en orden:
+    </p>
+
+    <ul>
+      <li>
+        <b>Preorden</b>: imprime primero la raíz y luego se va a los subárboles.
+      </li>
+      <li>
+        <b>Postorden</b>: primero procesa los subárboles y al final la raíz.
+      </li>
+    </ul>
+
+    <p>
+      Si quieres imprimir todas las keys de un árbol de búsqueda binaria
+      <b>T</b>, solo llama <b>INORDER-TREE-WALK(T.root)</b> y listo. Por
+      ejemplo, con los árboles de la <b>Figura 12.1</b>, el recorrido inorden
+      imprime las keys en este orden:
+    </p>
+
+    <p><b>2, 5, 5, 6, 7, 8</b>.</p>
+
+    <p>
+      Este algoritmo es 100% confiable porque se basa en la
+      <b>propiedad del árbol de búsqueda binaria</b>, así que con una inducción
+      matemática lo puedes demostrar sin sudar.
+    </p>
+    <code>ALGORITHM GOES HERE</code>
+    <hr />
   </body>
 </html>
