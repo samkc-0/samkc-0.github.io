@@ -1,3 +1,4 @@
+import { JSX, ReactNode } from "react";
 import { FaGithub } from "react-icons/fa";
 import { TbBinaryTree, TbMatrix } from "react-icons/tb";
 
@@ -10,11 +11,11 @@ export default function App() {
         </h1>
         <p className="mt-4 text-lg text-gray-500 text-center">[index]</p>
         <ul className="mt-6 space-y-2 text-lg text-blue-500 flex flex-col items-center text-center">
-          <Link href="article1.html">
+          <Link href="https://matmulworkbook.netlify.app/">
             <TbMatrix className="text-2xl" />
             &nbsp;linear algebra workbook
           </Link>
-          <Link href="article2.html">
+          <Link href="./pages/binary-search-trees.html">
             <TbBinaryTree className="text-2xl" />
             &nbsp;binary search trees
           </Link>
@@ -28,7 +29,13 @@ export default function App() {
   );
 }
 
-function Link({ href, children }) {
+function Link({
+  href,
+  children,
+}: {
+  href: string;
+  children: ReactNode;
+}): JSX.Element {
   return (
     <li>
       <a
